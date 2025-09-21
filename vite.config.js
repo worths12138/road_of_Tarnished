@@ -11,4 +11,5 @@ export default defineConfig({
 
   },}},
   plugins: [vue()],
+  base:'/', // 设置基础路径为相对路径，确保在不同环境下资源路径正确
 })
