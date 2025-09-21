@@ -1,10 +1,15 @@
 <script setup>
+
 </script>
 
 <template>
   <div id="app">
+    
     <!-- 路由出口：动态显示匹配的组件 -->
     <router-view></router-view>
+    <footer>
+        <p>© 2024 软工集市 版权所有</p>
+    </footer>
   </div>
   
 </template>
