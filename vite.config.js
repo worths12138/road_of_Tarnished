@@ -11,5 +11,5 @@ export default defineConfig({
 
   },}},
   plugins: [vue()],
-  base:'/road_of_Tarnished/', // 设置基础路径为相对路径，确保在不同环境下资源路径正确
+  base:'/road_of_Tarnished/'// 设置基础路径为相对路径，确保在不同环境下资源路径正确
 })
