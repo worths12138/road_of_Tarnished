@@ -1,12 +1,21 @@
 <script setup>
-
+import router from './router'
+const handleLoginSuccess = (user) => {
+  console.log('父组件确认登录成功，用户信息：', user)
+   try {
+    // 路由跳转代码（比如跳转到首页）
+    router.push({ name: 'newW' }); // 重点检查：目标路由是否存在？
+  } catch (err) {
+    console.error('路由跳转失败：', err); // 捕获并打印错误
+  }
+};
 </script>
 
 <template>
   <div id="app">
     
     <!-- 路由出口：动态显示匹配的组件 -->
-    <router-view></router-view>
+    <router-view @login-success="handleLoginSuccess"></router-view>
     <footer>
         <p>© 2024 软工集市 版权所有</p>
     </footer>
@@ -26,5 +35,9 @@
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
+}
+#app {
+  height: 100vh; /* 占满整个视口高度 */
+  overflow: auto; /* 允许内容溢出时滚动 */
 }
 </style>
